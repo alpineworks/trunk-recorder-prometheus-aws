@@ -17,3 +17,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends unzip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+STOPSIGNAL SIGTERM
+CMD ["trunk-recorder", "--config=/app/config.json"]
